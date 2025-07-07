@@ -83,12 +83,5 @@ h1 {
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-.container {
-  max-width: 100%;
-  box-sizing: border-box;
+overscroll-behavior: contain;
 }
