@@ -1,0 +1,46 @@
+body {
+    background-image: url("../img/test_back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px; 
+    gap: 20px;        
+}
+.container a {
+    color: #fecd73;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.container a:hover {
+    color: rgb(0, 153, 255);
+    text-decoration: underline;
+}

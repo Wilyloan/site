@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Font';
+    src: url('../Fonts/LuckiestGuy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Font1';
+    src: url('../Fonts/AlfaSlabOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
