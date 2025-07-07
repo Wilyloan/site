@@ -10,37 +10,74 @@ body {
 
 .wrapper {
     display: flex;
-    flex-direction: column;  
-    justify-content: center; 
-    align-items: center;     
+    flex-direction: column;  /* вертикальное расположение */
+    justify-content: center; /* вертикальное центрирование */
+    align-items: center;     /* горизонтальное центрирование */
     height: 100vh;
+    padding: 20px;           /* немного отступов, чтобы не прилегать к краям */
 }
 
 h1 {
     color: white;
     text-align: center;
-    font-size: 80px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
     margin: 0;
+
+    /* Адаптивный размер шрифта */
+    font-size: clamp(30px, 8vw, 80px);
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 30px; 
-    gap: 20px;        
+    margin-top: 30px;
+    gap: 20px;
+
+    /* Позволяем ссылкам переноситься на новую строку на узких экранах */
+    flex-wrap: wrap;
+    max-width: 100%;
 }
+
 .container a {
-    color: #fecd73;
+    color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 24px;
+    padding: 6px 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* чтобы текст в ссылках не переносился */
 }
 
 .container a:hover {
-    color: rgb(0, 153, 255);
     text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Мобильная версия */
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: clamp(20px, 10vw, 40px);
+    }
+
+    .container {
+        flex-direction: column; /* вертикально расположить ссылки */
+        align-items: center;
+        gap: 12px;
+    }
+
+    .container a {
+        font-size: 18px;
+        padding: 10px 20px;
+        width: 80%;
+        text-align: center;
+    }
 }
